@@ -1,79 +1,60 @@
+"use client";
 
-import { Sparkles, Github, Twitter, Linkedin, Mail } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Mail, Linkedin } from "lucide-react";
 
-export const Footer = () => {
+const Footer = () => {
   return (
-    <footer className="bg-card/30 backdrop-blur-sm border-t border-border/50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Logo and Description */}
-          <div className="md:col-span-1">
-            <Link to="/" className="flex items-center space-x-2 mb-4">
-              <Sparkles className="h-8 w-8 text-primary" />
-              <span className="text-xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-                SKANJO
-              </span>
-            </Link>
-            <p className="text-muted-foreground mb-6">
-              Transform your career with AI-powered CV optimization and skill development.
-            </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-200">
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-200">
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-200">
-                <Github className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-200">
-                <Mail className="h-5 w-5" />
-              </a>
-            </div>
-          </div>
-
-          {/* Product */}
-          <div>
-            <h3 className="font-semibold mb-4">Product</h3>
-            <ul className="space-y-2">
-              <li><Link to="/features" className="text-muted-foreground hover:text-primary transition-colors duration-200">Features</Link></li>
-              <li><Link to="/plans" className="text-muted-foreground hover:text-primary transition-colors duration-200">Plans</Link></li>
-              <li><Link to="/analyze" className="text-muted-foreground hover:text-primary transition-colors duration-200">CV Analyzer</Link></li>
-              <li><Link to="/demo" className="text-muted-foreground hover:text-primary transition-colors duration-200">Demo</Link></li>
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h3 className="font-semibold mb-4">Company</h3>
-            <ul className="space-y-2">
-              <li><Link to="/about" className="text-muted-foreground hover:text-primary transition-colors duration-200">About</Link></li>
-              <li><Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors duration-200">Blog</Link></li>
-              <li><Link to="/careers" className="text-muted-foreground hover:text-primary transition-colors duration-200">Careers</Link></li>
-              <li><Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors duration-200">Contact</Link></li>
-            </ul>
-          </div>
-
-          {/* Support */}
-          <div>
-            <h3 className="font-semibold mb-4">Support</h3>
-            <ul className="space-y-2">
-              <li><Link to="/help" className="text-muted-foreground hover:text-primary transition-colors duration-200">Help Center</Link></li>
-              <li><Link to="/privacy" className="text-muted-foreground hover:text-primary transition-colors duration-200">Privacy Policy</Link></li>
-              <li><Link to="/terms" className="text-muted-foreground hover:text-primary transition-colors duration-200">Terms of Service</Link></li>
-              <li><Link to="/security" className="text-muted-foreground hover:text-primary transition-colors duration-200">Security</Link></li>
-            </ul>
-          </div>
+    <footer className="bg-muted/10 text-foreground py-16 px-6 sm:px-12 md:px-24">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div>
+          <h3 className="font-bold text-lg mb-3">Contact</h3>
+          <p>Skanjo AI Pvt Ltd</p>
+          <p>91 Springboard, Bengaluru, India</p>
+          <p className="mt-2">support@skanjo.ai</p>
+          <p>+91-99999-00000</p>
         </div>
-
-        <div className="border-t border-border/50 mt-12 pt-8 text-center">
-          <p className="text-muted-foreground">
-            © 2025 SKANJO. All rights reserved. Built with ❤️ for career growth.
+        <div>
+          <h3 className="font-bold text-lg mb-3">Company</h3>
+          <ul className="space-y-2">
+            <li><a href="/about" className="hover:underline">About Us</a></li>
+            <li><a href="/privacy-policy" className="hover:underline">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="font-bold text-lg mb-3">Newsletter</h3>
+          <p className="text-sm text-muted-foreground mb-4">
+            Stay up to date with the latest from Skanjo
           </p>
+          <form className="flex items-center gap-2">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="px-4 py-2 rounded-md bg-background border border-border text-sm w-full"
+            />
+            <button
+              type="submit"
+              className="bg-primary text-white px-4 py-2 rounded-md hover:bg-primary/90"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+        <div>
+          <h3 className="font-bold text-lg mb-3">Follow Us</h3>
+          <div className="flex items-center gap-4">
+            <a
+              href="https://linkedin.com/company/skanjo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary"
+            >
+              <Linkedin className="w-6 h-6" />
+            </a>
+          </div>
         </div>
       </div>
     </footer>
   );
 };
+
+export default Footer;

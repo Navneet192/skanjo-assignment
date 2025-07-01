@@ -1,11 +1,12 @@
-
-
-import { HeroSection } from "@/components/landing/HeroSection";
-import { FeaturesSection } from "@/components/landing/FeaturesSection";
-import { StatsSection } from "@/components/landing/StatsSection";
-import { CTASection } from "@/components/landing/CTASection";
+import HeroSection from "@/components/landing/HeroSection";
+import FeaturesSection from "@/components/landing/FeaturesSection";
+import StatsSection from "@/components/landing/StatsSection";
+import ImpactSection from "@/components/landing/ImpacrSection";
+import TestimonialsSection from "@/components/landing/TestoNomials";
+import FAQSection from "@/components/landing/FAQSection";
+import CTASection from "@/components/landing/CTASection";
 import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
+import Footer from "@/components/layout/Footer";
 
 const Index = () => {
   return (
@@ -14,6 +15,9 @@ const Index = () => {
       <HeroSection />
       <FeaturesSection />
       <StatsSection />
+      <ImpactSection />
+      <TestimonialsSection />
+      <FAQSection />
       <CTASection />
       <Footer />
     </div>

@@ -1,59 +1,86 @@
+import { CheckCircle, XCircle } from "lucide-react";
 
-import { TrendingUp, Users, Award, Zap } from "lucide-react";
-
-const stats = [
+const data = [
   {
-    icon: Users,
-    value: "50K+",
-    label: "Professionals Helped",
-    color: "text-blue-500",
+    feature: "Intelligent Ranking",
+    skanjo: true,
+    zoho: false,
+    manual: false,
   },
   {
-    icon: TrendingUp,
-    value: "85%",
-    label: "Interview Success Rate",
-    color: "text-green-500",
+    feature: "Contextual Fit (role + industry + company)",
+    skanjo: true,
+    zoho: false,
+    manual: false,
   },
   {
-    icon: Award,
-    value: "95%",
-    label: "CV Score Improvement",
-    color: "text-purple-500",
+    feature: "Reasons Behind Scores",
+    skanjo: true,
+    zoho: false,
+    manual: true,
   },
   {
-    icon: Zap,
-    value: "24/7",
-    label: "AI Assistant",
-    color: "text-orange-500",
+    feature: "Auto-generated Interview Questions",
+    skanjo: true,
+    zoho: false,
+    manual: false,
+  },
+  {
+    feature: "Built for Zoho Recruit",
+    skanjo: true,
+    zoho: true,
+    manual: false,
+  },
+  {
+    feature: "Handles Thousands Seamlessly",
+    skanjo: true,
+    zoho: true,
+    manual: false,
+  },
+  {
+    feature: "ROI on Job Board Spend",
+    skanjo: true,
+    zoho: false,
+    manual: false,
   },
 ];
 
-export const StatsSection = () => {
+const ComparisonTable = () => {
   return (
-    <section className="py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent/10 to-primary/5" />
-      
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
-            <div 
-              key={index}
-              className="text-center group animate-fade-in"
-              style={{ animationDelay: `${index * 150}ms` }}
-            >
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50 mb-4 group-hover:scale-110 group-hover:border-primary/20 transition-all duration-300">
-                <stat.icon className={`h-8 w-8 ${stat.color}`} />
-              </div>
-              <div className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent mb-2">
-                {stat.value}
-              </div>
-              <div className="text-muted-foreground font-medium">
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </div>
+    <section className="px-6 sm:px-12 md:px-24 py-16 bg-muted text-center">
+      <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-foreground">
+        How is Skanjo different?
+      </h2>
+      <div className="overflow-x-auto">
+        <table className="min-w-full border border-border divide-y divide-border text-left bg-background rounded-xl overflow-hidden">
+          <thead className="bg-muted text-muted-foreground">
+            <tr>
+              <th className="px-6 py-4 font-semibold">Feature</th>
+              <th className="px-6 py-4 font-semibold text-center">Skanjo</th>
+              <th className="px-6 py-4 font-semibold text-center">Zoho Default</th>
+              <th className="px-6 py-4 font-semibold text-center">Manual</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-border">
+            {data.map((row, idx) => (
+              <tr key={idx} className="hover:bg-accent/10 transition">
+                <td className="px-6 py-4 font-medium text-foreground">{row.feature}</td>
+                {[row.skanjo, row.zoho, row.manual].map((val, i) => (
+                  <td key={i} className="px-6 py-4 text-center">
+                    {val ? (
+                      <CheckCircle className="text-green-500 w-5 h-5 mx-auto" />
+                    ) : (
+                      <XCircle className="text-red-500 w-5 h-5 mx-auto" />
+                    )}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </section>
   );
 };
+
+export default ComparisonTable;

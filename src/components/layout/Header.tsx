@@ -32,28 +32,16 @@ export const Header = () => {
               Home
             </Link>
             <Link
-              to="/features"
+              to="/product"
               className="text-foreground/70 hover:text-primary transition-colors duration-200"
             >
-              Features
+              product
             </Link>
             <Link
-              to="/plans"
+              to="/pricing"
               className="text-foreground/70 hover:text-primary transition-colors duration-200"
             >
-              Plans
-            </Link>
-            <Link
-              to="/docs"
-              className="text-foreground/70 hover:text-primary transition-colors duration-200"
-            >
-              Docs
-            </Link>
-            <Link
-              to="/analytics"
-              className="text-foreground/70 hover:text-primary transition-colors duration-200"
-            >
-              Analytics
+              pricing
             </Link>
           </nav>
 
@@ -72,7 +60,7 @@ export const Header = () => {
                   asChild
                   className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 transform hover:scale-105 transition-all duration-200 rounded-xl shadow-lg shadow-primary/25"
                 >
-                  <Link to="/analyze">Get Started</Link>
+                  <Link to="/analyze">Start Free Trials</Link>
                 </Button>
               </>
             )}
@@ -102,22 +90,16 @@ export const Header = () => {
                 Home
               </Link>
               <Link
-                to="/features"
+                to="/product"
                 className="block text-foreground/70 hover:text-primary transition-colors duration-200"
               >
-                Features
+                product
               </Link>
               <Link
-                to="/plans"
+                to="/pricing"
                 className="block text-foreground/70 hover:text-primary transition-colors duration-200"
               >
-                Plans
-              </Link>
-              <Link
-                to="/docs"
-                className="block text-foreground/70 hover:text-primary transition-colors duration-200"
-              >
-                Docs
+                pricing
               </Link>
               <div className="pt-4 space-y-3">
                 {isAuthenticated ? (
@@ -133,7 +115,7 @@ export const Header = () => {
                       className="w-full bg-gradient-to-r from-primary to-primary/80 rounded-xl"
                       asChild
                     >
-                      <Link to="/analyze">Get Started</Link>
+                      <Link to="/analyze">Start Free Trial</Link>
                     </Button>
                   </>
                 )}
