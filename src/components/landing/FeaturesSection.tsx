@@ -2,19 +2,19 @@ import { Button } from "@/components/ui/button";
 
 const pillars = [
   {
-    image: "src/components/images/testing.jpg",
+    image: "/images/testing.jpg",
     title: "Relevance over Keywords",
     description:
       "Skanjo evaluates context—not just skills—using role, domain, and company-specific intelligence.",
   },
   {
-    image: "src/components/images/testing.jpg",
+    image: "/images/testing.jpg",
     title: "Speed That Matters",
     description:
       "Shortlists 1000+ CVs in minutes. No more 'will screen later' fatigue.",
   },
   {
-    image: "src/components/images/testing.jpg",
+    image: "/images/testing.jpg",
     title: "Insight That Helps Close",
     description:
       "Understand the 'why' behind every match—not just the percentage.",
