@@ -1,18 +1,20 @@
+import { Button } from "@/components/ui/button";
+
 const pillars = [
   {
-    image: "https://placehold.co/320x180?text=Img1",
+    image: "src/components/images/testing.jpg",
     title: "Relevance over Keywords",
     description:
       "Skanjo evaluates context—not just skills—using role, domain, and company-specific intelligence.",
   },
   {
-    image: "https://placehold.co/320x180?text=Img2",
+    image: "src/components/images/testing.jpg",
     title: "Speed That Matters",
     description:
       "Shortlists 1000+ CVs in minutes. No more 'will screen later' fatigue.",
   },
   {
-    image: "https://placehold.co/320x180?text=Img3",
+    image: "src/components/images/testing.jpg",
     title: "Insight That Helps Close",
     description:
       "Understand the 'why' behind every match—not just the percentage.",
@@ -30,13 +32,13 @@ const FeaturesSection = () => {
           Discover the pillars that make Skanjo the best choice for modern recruitment.
         </p>
       </div>
-      <div className="space-y-16 max-w-7xl mx-auto">
+      <div className="space-y-16 max-w-7xl mx-auto h-full ">
         {pillars.map((pillar, idx) => (
           <div
             key={pillar.title}
-            className={`flex flex-col-reverse sm:flex-row ${
+            className={`flex flex-col-reverse sm:flex-row h-[500px] ${
               idx % 2 === 1 ? "sm:flex-row-reverse" : ""
-            } items-center gap-10 bg-white/80 dark:bg-muted/40 rounded-3xl shadow-xl border border-border p-6 sm:p-10`}
+            } items-center  dark:bg-muted/40  p-6 sm:p-10`}
           >
             <div className="sm:w-1/2 space-y-4">
               <span className="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-blue-100 text-black-700 mb-2 tracking-widest shadow-sm">
@@ -48,20 +50,20 @@ const FeaturesSection = () => {
               <p className="text-muted-foreground text-base sm:text-lg mb-4">
                 {pillar.description}
               </p>
-              <button
+              <Button
                 className={`mt-2 bg-black text-white px-7 py-2.5 rounded-xl font-semibold shadow-md${
                   idx === 1 ? "ring-4 ring-blue-300" : ""
                 }`}
               >
                 Learn More
-              </button>
+              </Button>
             </div>
             <div
-              className={`sm:w-1/2 flex justify-center relative ${
-                idx === 2 ? "ring-4 ring-blue-300 rounded-2xl p-2" : ""
+              className={`sm:w-1/2 flex justify-center relative  max-w-9xl h-[300px] ${
+                idx === 2 ? "rounded-2xl p-2" : ""
               }`}
             >
-              <div className="w-80 h-48 bg-muted rounded-2xl overflow-hidden shadow-lg flex items-center justify-center">
+              <div className="w-300 h-300 bg-muted  overflow-hidden shadow-lg flex items-center justify-center">
                 <img
                   src={pillar.image}
                   alt={pillar.title}

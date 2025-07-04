@@ -1,5 +1,4 @@
 import { AlertTriangle, Clock, ShieldCheck, Compass, Users } from "lucide-react";
-
 const problems = [
   {
     icon: Users,

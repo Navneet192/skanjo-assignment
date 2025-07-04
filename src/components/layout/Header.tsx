@@ -35,13 +35,13 @@ export const Header = () => {
               to="/product"
               className="text-foreground/70 hover:text-primary transition-colors duration-200"
             >
-              product
+              Product
             </Link>
             <Link
               to="/pricing"
               className="text-foreground/70 hover:text-primary transition-colors duration-200"
             >
-              pricing
+              Pricing
             </Link>
           </nav>
 
